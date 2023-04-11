@@ -1,0 +1,15 @@
+.cardProjetos_container{
+    min-width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+    margin: 1em;
+    background-color: rgb(81, 81, 214);
+}
+
+.cardProjetos_container p{
+    padding: 0.5em;
+    color: black;
+}
