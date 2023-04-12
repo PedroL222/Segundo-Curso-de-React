@@ -1,9 +1,8 @@
 import CardProjetos from './CardProjetos';
-import Hora from './Hora';
 import styles from './Main.module.css';
 
 
-function Main({projetos}){
+function Main({projetos,num,setNum}){
 
     return(
         <main className={styles.main_container}>
@@ -17,9 +16,11 @@ function Main({projetos}){
                     ))
                 }
             </section>
-            {setInterval(()=>(
-                <Hora />
-            ),1000)}
+            <h1>Valor do Num vindo do useState</h1>
+            <button onClick={()=>{setNum(num + 1)}}>Aumentar valor</button>
+            <button onClick={()=>{setNum(num - 1)}}>Diminuir valor</button>
+
+            <p>Valor:{num}</p>
         </main>
     )
 }
