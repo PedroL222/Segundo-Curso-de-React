@@ -15,6 +15,10 @@ class Classe extends React.Component{
         this.setState({acordado:!this.state.acordado})
     }
 
+    enriquecer(){
+        this.setState({dinheiro: this.state.dinheiro + 1})
+    }
+
     render(){
         return(
             <>
@@ -23,6 +27,7 @@ class Classe extends React.Component{
                 <p>Dormindo: {this.state.acordado ? 'Não' : 'Sim'}</p>
                 <p>Dinheiro: {this.state.dinheiro}</p>
                 <button onClick={()=>this.acordar()}>Acordar</button>
+                <button onClick={()=>this.enriquecer()}>Enriquecer</button>
             </>
         )
     }
