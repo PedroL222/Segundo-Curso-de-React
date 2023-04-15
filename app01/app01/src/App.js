@@ -6,6 +6,9 @@ import Main from './components/Corpo/Main';
 
 function App() {
 
+  localStorage.setItem("nome","pedro");
+  localStorage.getItem("nome");
+
   const [num,setNum] = useState(0);
   
 

@@ -1,7 +1,7 @@
 import CardProjetos from './CardProjetos';
 import styles from './Main.module.css';
 import Form from '../form/Form';
-
+import Classe from '../classes/Classe';
 
 function Main({projetos,num,setNum}){
 
@@ -29,7 +29,8 @@ function Main({projetos,num,setNum}){
             <p>Valor:{num}</p>
 
             <Form onSubmit={mostrarDadosPessoais} />
-           
+            <Classe pessoa="Pedro Lucas" />
+            
         </main>
     )
 }
