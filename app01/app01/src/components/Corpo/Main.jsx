@@ -1,8 +1,14 @@
 import CardProjetos from './CardProjetos';
 import styles from './Main.module.css';
+import Form from '../form/Form';
 
 
 function Main({projetos,num,setNum}){
+
+    function mostrarDadosPessoais(e){
+        e.preventDafault();
+        
+    }
 
     return(
         <main className={styles.main_container}>
@@ -21,6 +27,9 @@ function Main({projetos,num,setNum}){
             <button onClick={()=>{setNum(num - 1)}}>Diminuir valor</button>
 
             <p>Valor:{num}</p>
+
+            <Form onSubmit={mostrarDadosPessoais} />
+           
         </main>
     )
 }
